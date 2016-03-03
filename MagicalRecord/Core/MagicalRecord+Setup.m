@@ -35,6 +35,11 @@
 
 + (void) setupCoreDataStackWithAutoMigratingSqliteStoreNamed:(NSString *)storeName
 {
+    [[self class] setupCoreDataStackWithAutoMigratingSqliteStoreNamed:storeName andOptions:nil];
+}
+
++ (void) setupCoreDataStackWithAutoMigratingSqliteStoreNamed:(NSString *)storeName andOptions:(NSDictionary *)options
+{
     if ([NSPersistentStoreCoordinator MR_defaultStoreCoordinator] != nil) return;
     
     NSPersistentStoreCoordinator *coordinator = [NSPersistentStoreCoordinator MR_coordinatorWithAutoMigratingSqliteStoreNamed:storeName];

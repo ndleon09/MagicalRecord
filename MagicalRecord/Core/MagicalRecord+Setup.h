@@ -17,6 +17,7 @@
 
 + (void) setupCoreDataStackWithStoreNamed:(MR_nonnull NSString *)storeName;
 + (void) setupCoreDataStackWithAutoMigratingSqliteStoreNamed:(MR_nonnull NSString *)storeName;
++ (void) setupCoreDataStackWithAutoMigratingSqliteStoreNamed:(MR_nonnull NSString *)storeName andOptions:(MR_nullable NSDictionary*)options;
 
 + (void) setupCoreDataStackWithStoreAtURL:(MR_nonnull NSURL *)storeURL;
 + (void) setupCoreDataStackWithAutoMigratingSqliteStoreAtURL:(MR_nonnull NSURL *)storeURL;
