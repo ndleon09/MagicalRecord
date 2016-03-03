@@ -42,7 +42,7 @@
 {
     if ([NSPersistentStoreCoordinator MR_defaultStoreCoordinator] != nil) return;
     
-    NSPersistentStoreCoordinator *coordinator = [NSPersistentStoreCoordinator MR_coordinatorWithAutoMigratingSqliteStoreNamed:storeName];
+    NSPersistentStoreCoordinator *coordinator = [NSPersistentStoreCoordinator MR_coordinatorWithAutoMigratingSqliteStoreNamed:storeName andOptions:options];
     [NSPersistentStoreCoordinator MR_setDefaultStoreCoordinator:coordinator];
     
     [NSManagedObjectContext MR_initializeDefaultContextWithCoordinator:coordinator];
